@@ -17,17 +17,17 @@ export default function Footer() {
               <h3 className="text-[#696969] text-sm mb-4">CONNECT</h3>
               <div className="space-y-2">
                 <p>
-                  <a href="#" className="text-white hover:text-zinc-300">
+                  <a href="https://www.instagram.com/freekvermaas" className="text-white hover:text-zinc-300">
                     Instagram
                   </a>
                 </p>
                 <p>
-                  <a href="#" className="text-white hover:text-zinc-300">
+                  <a href="https://www.linkedin.com/in/freekvermaas/" className="text-white hover:text-zinc-300">
                     LinkedIn
                   </a>
                 </p>
                 <p>
-                  <a href="#" className="text-white hover:text-zinc-300">
+                  <a href="https://www.freekvermaas.com/" className="text-white hover:text-zinc-300">
                     Portfolio
                   </a>
                 </p>
