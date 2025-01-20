@@ -22,11 +22,10 @@ export default function Home() {
         {/* Button */}
         <Link
           href="/newpage"
-          className="inline-block px-8 py-4 font-bold rounded-full border-2 border-transparent hover:scale-105 transition-all duration-300 shadow-inner"
+          className="inline-block px-8 py-4 font-bold rounded-full border-2 border-transparent hover:scale-105 transition-all duration-300 shadow-inner font-inter"
           style={{
-            backgroundColor: '#FFC939',  // Button color
-            color: '#FF5D00',            // Text color
-            boxShadow: 'inset 2px 2px 5px rgba(0, 0, 0, 0.2)', // Custom inner shadow
+            backgroundColor: "#FFC939",
+            color: "#FF5D00",
           }}
         >
           START
@@ -34,7 +33,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="absolute bottom-4 text-white text-sm">
+      <footer className="absolute bottom-4 text-white text-sm font-inter">
         © Freek Vermaas 2025
       </footer>
     </div>
