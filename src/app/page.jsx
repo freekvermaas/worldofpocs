@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link"; // Import Link to navigate to a new page
+import Link from "next/link";
 
-export default function Home() {
+export default function home() {
   return (
     <div
       className="min-h-screen bg-cover bg-center flex items-center justify-center flex-col"
@@ -21,7 +21,7 @@ export default function Home() {
 
         {/* Button */}
         <Link
-          href="/newpage"
+          href="/experiences"
           className="inline-block px-8 py-4 font-bold rounded-full border-2 border-transparent hover:scale-105 transition-all duration-300 shadow-inner font-inter"
           style={{
             backgroundColor: "#FFC939",
