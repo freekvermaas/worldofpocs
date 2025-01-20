@@ -11,7 +11,13 @@ export default {
         foreground: "var(--foreground)",
       },
       animation: {
-        'bounce-slow': 'bounce 3s infinite',
+        'bounce-slow': 'custom-bounce 6s ease-in-out infinite',
+      },
+      keyframes: {
+        'custom-bounce': {
+          '0%, 100%': { transform: 'translateY(-5%)' },
+          '40%, 60%': { transform: 'translateY(5%)' },
+        },
       },
     },
   },
