@@ -1,14 +1,33 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useCallback } from "react"
 
-export default function Exp({ onSortChange }) {
+export default function Exp({ onSortChange, onSearch }) {
   const [activeButton, setActiveButton] = useState("New")
+  const [searchQuery, setSearchQuery] = useState("")
 
   const handleButtonClick = (buttonType) => {
     setActiveButton(buttonType)
     onSortChange(buttonType)
   }
+
+  const handleSearch = useCallback(
+    (e) => {
+      const query = e.target.value
+      setSearchQuery(query)
+      onSearch(query)
+    },
+    [onSearch],
+  )
+
+  const handleKeyPress = useCallback(
+    (e) => {
+      if (e.key === "Enter") {
+        onSearch(searchQuery)
+      }
+    },
+    [searchQuery, onSearch],
+  )
 
   return (
     <header className="w-full border-b-2 border-black">
@@ -17,13 +36,17 @@ export default function Exp({ onSortChange }) {
           <div className="w-1/3">
             <div className="flex gap-4 justify-center">
               <button
-                className={`px-6 py-2 rounded-full ${activeButton === "New" ? "bg-[#FFC939] text-black" : "bg-white text-black border-2 border-[#FFC939]"} font-medium`}
+                className={`px-6 py-2 rounded-full ${
+                  activeButton === "New" ? "bg-[#FFC939] text-black" : "bg-white text-black border-2 border-[#FFC939]"
+                } font-medium`}
                 onClick={() => handleButtonClick("New")}
               >
                 New
               </button>
               <button
-                className={`px-6 py-2 rounded-full ${activeButton === "Top" ? "bg-[#FFC939] text-black" : "bg-white text-black border-2 border-[#FFC939]"} font-medium`}
+                className={`px-6 py-2 rounded-full ${
+                  activeButton === "Top" ? "bg-[#FFC939] text-black" : "bg-white text-black border-2 border-[#FFC939]"
+                } font-medium`}
                 onClick={() => handleButtonClick("Top")}
               >
                 Top
@@ -39,6 +62,9 @@ export default function Exp({ onSortChange }) {
                 <input
                   type="text"
                   placeholder="Search for..."
+                  value={searchQuery}
+                  onChange={handleSearch}
+                  onKeyPress={handleKeyPress}
                   className="w-full pl-4 pr-10 py-2 rounded-full bg-[#FFC939] text-black placeholder-black/70 focus:outline-none"
                   aria-label="Search experiences"
                 />

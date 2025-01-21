@@ -1,12 +1,13 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import Header from "../components/Header"
 import Exp from "../components/Exp"
 import Footer from "../components/Footer"
 
 export default function Experiences() {
   const [sortOrder, setSortOrder] = useState("New")
+  const [searchQuery, setSearchQuery] = useState("")
 
   const features = [
     { id: 1, name: "TOGGLE DARK/LIGHT MODE", link: "/darkmode" },
@@ -17,8 +18,22 @@ export default function Experiences() {
     { id: 6, name: "???", link: "/feature6" },
   ]
 
+  const handleSearch = useCallback((query) => {
+    setSearchQuery(query)
+  }, [])
+
+  const filteredFeatures = features.filter((feature) => feature.name.toLowerCase().includes(searchQuery.toLowerCase()))
+
   const sortedFeatures =
-    sortOrder === "New" ? features : [features[1], features[3], features[0], features[2], features[5], features[4]]
+    sortOrder === "New"
+      ? filteredFeatures
+      : [...filteredFeatures].sort((a, b) => {
+          const newOrder = [1, 3, 0, 2, 5, 4]
+          return (
+            newOrder.indexOf(features.findIndex((f) => f.id === a.id)) -
+            newOrder.indexOf(features.findIndex((f) => f.id === b.id))
+          )
+        })
 
   const handleSortChange = (newSortOrder) => {
     setSortOrder(newSortOrder)
@@ -26,8 +41,8 @@ export default function Experiences() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header/>
-      <Exp onSortChange={handleSortChange} />
+      <Header />
+      <Exp onSortChange={handleSortChange} onSearch={handleSearch} />
       <div className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-6">
         {sortedFeatures.map((feature) => (
           <a
@@ -39,7 +54,7 @@ export default function Experiences() {
           </a>
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
