@@ -14,7 +14,7 @@ export default function DarkMode() {
 
           {/* Content Section */}
           <div className="space-y-6">
-            <h1 className="text-3xl font-inter font-semibold text-black">Dark Mode</h1>
+            <h1 className="text-3xl font-inter font-semibold text-black">TOGGLE DARK/LIGHT MODE</h1>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-black">
               <div>
                 <h2 className="text-lg font-inter mb-2">
@@ -38,8 +38,52 @@ export default function DarkMode() {
           </div>
         </div>
       </main>
+
       {/* Black outline that spans the entire width */}
       <div className="w-full h-0.5 bg-black mt-8"></div>
+
+      {/* Steps Section */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-5xl">
+        <div className="space-y-12">
+          {/* Introduction text */}
+          <p className="text-center text-black max-w-3xl mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          </p>
+
+          {/* Step 1 */}
+          <div className="space-y-6">
+            <h2 className="text-2xl font-inter font-semibold text-center text-black">STEP 1</h2>
+            <div className="bg-gray-200 border-2 border-black rounded-2xl aspect-video w-full max-w-3xl mx-auto"></div>
+            <p className="text-center text-black max-w-3xl mx-auto">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+            </p>
+          </div>
+
+          {/* Step 2 */}
+          <div className="space-y-6">
+            <h2 className="text-2xl font-inter font-semibold text-center text-black">STEP 2</h2>
+            <div className="bg-gray-200 border-2 border-black rounded-2xl aspect-video w-full max-w-3xl mx-auto"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Second Black outline that spans the entire width */}
+      <div className="w-full h-0.5 bg-black mt-8"></div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-5xl">
+        <h2 className="text-3xl font-inter font-semibold text-center text-black mb-8">ANDERE POC's</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {/* POC Card 1 */}
+            <div className="bg-gray-200 border-2 border-black rounded-2xl aspect-[3/4]"></div>
+            {/* POC Card 2 */}
+            <div className="bg-gray-200 border-2 border-black rounded-2xl aspect-[3/4]"></div>
+            {/* POC Card 3 */}
+            <div className="bg-gray-200 border-2 border-black rounded-2xl aspect-[3/4]"></div>
+        </div>
+      </div>
+
       <Footer />
     </div>
   )

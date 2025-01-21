@@ -19,6 +19,9 @@ export default {
           '40%, 60%': { transform: 'translateY(5%)' },
         },
       },
+      fontFamily: {
+        inter: ['Inter', 'Arial', 'sans-serif'], // Add Inter font
+      },
     },
   },
   plugins: [],
