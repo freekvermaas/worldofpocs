@@ -1,6 +1,14 @@
-"use client";
+"use client"
 
-export default function Exp() {
+import { useState } from "react"
+
+export default function Exp({ onSortChange }) {
+  const [activeButton, setActiveButton] = useState("New")
+
+  const handleButtonClick = (buttonType) => {
+    setActiveButton(buttonType)
+    onSortChange(buttonType)
+  }
 
   return (
     <header className="w-full border-b-2 border-black">
@@ -8,18 +16,22 @@ export default function Exp() {
         <div className="flex items-center justify-between">
           <div className="w-1/3">
             <div className="flex gap-4 justify-center">
-              <button className="px-6 py-2 rounded-full bg-[#FFC939] text-black font-medium">
+              <button
+                className={`px-6 py-2 rounded-full ${activeButton === "New" ? "bg-[#FFC939] text-black" : "bg-white text-black border-2 border-[#FFC939]"} font-medium`}
+                onClick={() => handleButtonClick("New")}
+              >
                 New
               </button>
-              <button className="px-6 py-2 rounded-full bg-[#FFC939] text-black font-medium">
+              <button
+                className={`px-6 py-2 rounded-full ${activeButton === "Top" ? "bg-[#FFC939] text-black" : "bg-white text-black border-2 border-[#FFC939]"} font-medium`}
+                onClick={() => handleButtonClick("Top")}
+              >
                 Top
               </button>
             </div>
           </div>
 
-          <h1 className="w-1/3 text-4xl text-black font-bold text-center">
-            EXPERIENCES
-          </h1>
+          <h1 className="w-1/3 text-4xl text-black font-bold text-center">EXPERIENCES</h1>
 
           <div className="w-1/3">
             <div className="flex justify-center">
@@ -50,5 +62,6 @@ export default function Exp() {
         </div>
       </div>
     </header>
-  );
+  )
 }
+
