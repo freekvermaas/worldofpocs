@@ -16,8 +16,8 @@ export default function Experiences() {
     { id: 2, name: "MOVING LOGO", link: "/feature2" },
     { id: 3, name: "TOP/NEW SORTING", link: "/topnewsorting" },
     { id: 4, name: "SEARCH ENGINE", link: "/feature4" },
-    { id: 5, name: "???", link: "/feature5" },
-    { id: 6, name: "???", link: "/feature6" },
+    { id: 5, name: "???", link: null },
+    { id: 6, name: "???", link: null },
   ]
 
   const handleSearch = useCallback((query) => {
@@ -69,6 +69,7 @@ function FeatureCard({ feature }) {
   const isToggleDarkMode = feature.name === "TOGGLE DARK/LIGHT MODE"
   const isTopNewSorting = feature.name === "TOP/NEW SORTING"
   const isSearchEngine = feature.name === "SEARCH ENGINE"
+  const isUnknownFeature = feature.name === "???"
 
   // Use a default theme (e.g., 'light') for the initial server-side render
   const currentTheme = mounted ? theme : "light"
@@ -84,9 +85,8 @@ function FeatureCard({ feature }) {
     bgImage = currentTheme === "dark" ? "/images/darksearchenginebg.png" : "/images/searchenginebg.png"
   }
 
-  return (
-    <a
-      href={feature.link}
+  const cardContent = (
+    <div
       className={`relative border-2 border-black dark:border-white rounded-2xl aspect-[3/4] hover:scale-105 flex items-center justify-center overflow-hidden ${
         isMovingLogo || isToggleDarkMode || isTopNewSorting || isSearchEngine
           ? "bg-[#D9D9D9] dark:bg-gray-800"
@@ -103,6 +103,14 @@ function FeatureCard({ feature }) {
         />
       )}
       <span className="text-black dark:text-white font-inter font-semibold z-10 relative">{feature.name}</span>
+    </div>
+  )
+
+  return isUnknownFeature ? (
+    cardContent
+  ) : (
+    <a href={feature.link} className="block">
+      {cardContent}
     </a>
   )
 }
