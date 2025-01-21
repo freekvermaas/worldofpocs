@@ -13,9 +13,9 @@ export default function Experiences() {
 
   const features = [
     { id: 1, name: "TOGGLE DARK/LIGHT MODE", link: "/darkmode" },
-    { id: 2, name: "MOVING LOGO", link: "/feature2" },
+    { id: 2, name: "MOVING LOGO", link: "/movinglogo" },
     { id: 3, name: "TOP/NEW SORTING", link: "/topnewsorting" },
-    { id: 4, name: "SEARCH ENGINE", link: "/feature4" },
+    { id: 4, name: "SEARCH ENGINE", link: "/searchengine" },
     { id: 5, name: "???", link: null },
     { id: 6, name: "???", link: null },
   ]

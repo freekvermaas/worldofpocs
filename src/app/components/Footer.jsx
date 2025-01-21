@@ -36,15 +36,14 @@ export default function Footer() {
   
             {/* Logo Section */}
             <div className="flex justify-end">
-              <img
-                src="/images/worldofpocslogofooter.png"
-                alt="World of poc's"
-              />
+              <a href="/" className="inline-block">
+                <img src="/images/worldofpocslogofooter.png" alt="World of poc's" />
+              </a>
             </div>
           </div>
   
           {/* Copyright */}
-          <div className="mt-12 text-center text-white text-sm">© Freek Vermaas 2025. Alle rechten voorbehouden.</div>
+          <div className="mt-12 text-center text-white text-sm">© Freek Vermaas 2025. All rights reserved.</div>
         </div>
       </footer>
     );

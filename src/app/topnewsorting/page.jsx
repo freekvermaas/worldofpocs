@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
+import Image from "next/image"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Link from "next/link"
@@ -71,49 +72,131 @@ export default function TopNewSorting() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-5xl">
         <div className="space-y-12">
           <p className="text-center max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+            The 'Top' and 'New' buttons are there to help you categorize the items on your website.
+            In this case, it helps categorize the proof of concepts I made.
           </p>
 
           <div className="space-y-6">
             <h2 className="text-2xl font-inter font-semibold text-center">STEP 1</h2>
             <div
-              className={`border-2 rounded-2xl aspect-video w-full max-w-3xl mx-auto ${
-                theme === "dark" ? "bg-gray-800 border-white" : "bg-gray-200 border-black"
-              }`}
-            ></div>
+            className={`border-2 rounded-2xl max-w-3xl mx-auto overflow-hidden flex items-center justify-center ${
+                theme === "dark" ? "border-white" : "border-black"
+            }`}
+            style={{ width: "200px", height: "90px" }}
+            >
+              <Image
+                src="/images/newandtop.png"
+                alt="Step 1 Example"
+                width={200}
+                height={200}
+                className="rounded-2xl"
+              />
+            </div>
             <p className="text-center max-w-3xl mx-auto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+              Start by creating the Top and New buttons. These buttons will let the user toggle between two sorting modes.
+              The design was already created, so it was just about implementing it.
             </p>
           </div>
 
           <div className="space-y-6">
             <h2 className="text-2xl font-inter font-semibold text-center">STEP 2</h2>
             <div
-              className={`border-2 rounded-2xl aspect-video w-full max-w-3xl mx-auto ${
-                theme === "dark" ? "bg-gray-800 border-white" : "bg-gray-200 border-black"
-              }`}
-            ></div>
+            className={`border-2 rounded-2xl max-w-3xl mx-auto overflow-hidden flex items-center justify-center ${
+                theme === "dark" ? "border-white" : "border-black"
+            }`}
+            style={{ width: "600px", height: "200px" }}
+            >
+              <Image
+                src="/images/topnew2code.png"
+                alt="Step 2 Example"
+                width={600}
+                height={200}
+                className="rounded-2xl"
+              />
+            </div>
+            <p className="text-center max-w-3xl mx-auto">
+              Once the buttons are ready, the next step is to display the items in their default order, which is "New".
+              This means simply showing the list in the order it was defined.
+            </p>
           </div>
+
+          <div className="space-y-6">
+            <h2 className="text-2xl font-inter font-semibold text-center">STEP 3</h2>
+            <div
+            className={`border-2 rounded-2xl max-w-3xl mx-auto overflow-hidden flex items-center justify-center ${
+                theme === "dark" ? "border-white" : "border-black"
+            }`}
+            style={{ width: "600px", height: "220px" }}
+            >
+              <Image
+                src="/images/topnew3code.png"
+                alt="Step 3 Example"
+                width={600}
+                height={600}
+                className="rounded-2xl"
+              />
+            </div>
+            <p className="text-center max-w-3xl mx-auto">
+              Next, define a custom order for the "Top" option. This involves specifying a manual order using an array and sorting the items accordingly.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <h2 className="text-2xl font-inter font-semibold text-center">FINAL RESULT</h2>
+            <div
+                className={`border-2 rounded-2xl max-w-3xl mx-auto overflow-hidden flex items-center justify-center ${
+                theme === "dark" ? "bg-gray-800 border-white" : "bg-gray-200 border-black"
+                }`}
+                style={{ aspectRatio: "16/9" }} // Ensures video maintains the rectangle aspect ratio
+            >
+                <video
+                className="w-full h-full object-cover rounded-2xl"
+                controls
+                playsInline
+                >
+                <source src="/videos/topnewsortingvideo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+                </video>
+            </div>
+           </div>
+
         </div>
       </div>
 
       <div className={`w-full h-0.5 mt-8 ${theme === "dark" ? "bg-white" : "bg-black"}`}></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-5xl">
-        <h2 className="text-3xl font-inter font-semibold text-center mb-8">ANDERE POC's</h2>
+        <h2 className="text-3xl font-inter font-semibold text-center mb-8">OTHER POC's</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {otherFeatures.map((feature) => (
             <Link
               key={feature.id}
               href={feature.link}
-              className={`border-2 rounded-2xl aspect-[3/4] ${
-                theme === "dark" ? "bg-gray-800 border-white" : "bg-[#D9D9D9] border-black"
-              } hover:scale-105 flex items-center justify-center transition-transform duration-200`}
+              className="block relative border-2 rounded-2xl aspect-[3/4] hover:scale-105 transition-transform duration-200 overflow-hidden"
             >
+              <Image
+                src={
+                  feature.name === "TOGGLE DARK/LIGHT MODE"
+                    ? theme === "dark"
+                      ? "/images/darkdarkmodebg.png"
+                      : "/images/darkmodebg.png"
+                    : feature.name === "MOVING LOGO"
+                      ? theme === "dark"
+                        ? "/images/darkmovinglogobg.png"
+                        : "/images/movinglogobg.png"
+                      : theme === "dark"
+                        ? "/images/darksearchenginebg.png"
+                        : "/images/searchenginebg.png"
+                }
+                alt={`${feature.name} Background`}
+                fill
+                style={{ objectFit: "cover" }}
+                className="z-0"
+              />
               <span
-                className={`text-center font-inter font-semibold ${theme === "dark" ? "text-white" : "text-black"}`}
+                className={`absolute inset-0 flex items-center justify-center text-center font-inter font-semibold z-10 ${
+                  theme === "dark" ? "text-white" : "text-black"
+                }`}
               >
                 {feature.name}
               </span>
@@ -126,4 +209,3 @@ export default function TopNewSorting() {
     </div>
   )
 }
-
