@@ -47,7 +47,7 @@ export default function Exp({ onSortChange, onSearch }) {
                 className={`px-6 py-2 rounded-full ${
                   activeButton === "New"
                     ? "bg-[#FFC939] text-black"
-                    : "bg-white text-black border-2 border-[#FFC939] dark:bg-gray-800 dark:text-white dark:border-[#FFC939]"
+                    : "bg-white text-black border-2 border-[#FFC939] dark:bg-black dark:text-white dark:border-[#FFC939]"
                 } font-medium`}
                 onClick={() => handleButtonClick("New")}
               >
@@ -57,7 +57,7 @@ export default function Exp({ onSortChange, onSearch }) {
                 className={`px-6 py-2 rounded-full ${
                   activeButton === "Top"
                     ? "bg-[#FFC939] text-black"
-                    : "bg-white text-black border-2 border-[#FFC939] dark:bg-gray-800 dark:text-white dark:border-[#FFC939]"
+                    : "bg-white text-black border-2 border-[#FFC939] dark:bg-black dark:text-white dark:border-[#FFC939]"
                 } font-medium`}
                 onClick={() => handleButtonClick("Top")}
               >
@@ -95,8 +95,8 @@ export default function Exp({ onSortChange, onSearch }) {
               </svg>
             </div>
             <Button variant="outline" size="icon" onClick={toggleTheme} className="w-10 h-10 rounded-full">
-              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 dark:scale-0" />
+              <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
           </div>

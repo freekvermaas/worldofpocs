@@ -42,7 +42,7 @@ export default function Experiences() {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      <div className="min-h-screen bg-white dark:bg-black">
         <Header />
         <Exp onSortChange={handleSortChange} onSearch={handleSearch} />
         <div className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -50,7 +50,7 @@ export default function Experiences() {
             <a
               key={feature.id}
               href={feature.link}
-              className="bg-[#D9D9D9] dark:bg-gray-800 border-2 border-black dark:border-white rounded-2xl aspect-[3/4] transform transition-transform hover:scale-105 flex items-center justify-center"
+              className="bg-[#D9D9D9] dark:bg-gray-800 border-2 border-black dark:border-white rounded-2xl aspect-[3/4] hover:scale-105 flex items-center justify-center"
             >
               <span className="text-black dark:text-white font-inter font-semibold">{feature.name}</span>
             </a>
