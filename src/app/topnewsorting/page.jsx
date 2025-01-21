@@ -30,11 +30,14 @@ export default function TopNewSorting() {
       <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-10 max-w-5xl">
         <div className="space-y-8">
           <div
-            className={`border-2 rounded-lg aspect-video flex items-center justify-center ${
+            className={`border-2 rounded-lg overflow-hidden ${
               theme === "dark" ? "bg-gray-800 border-white" : "bg-gray-200 border-black"
             }`}
           >
-            (video van de POC)
+            <video className="w-full h-full object-cover" controls playsInline>
+              <source src="/path-to-your-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <div className="space-y-6">
