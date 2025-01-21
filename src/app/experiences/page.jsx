@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useCallback } from "react"
+import { ThemeProvider } from "next-themes"
 import Header from "../components/Header"
 import Exp from "../components/Exp"
 import Footer from "../components/Footer"
@@ -40,22 +41,24 @@ export default function Experiences() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <Exp onSortChange={handleSortChange} onSearch={handleSearch} />
-      <div className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {sortedFeatures.map((feature) => (
-          <a
-            key={feature.id}
-            href={feature.link}
-            className="bg-[#D9D9D9] border-2 border-black rounded-2xl aspect-[3/4] transform transition-transform hover:scale-105 flex items-center justify-center"
-          >
-            <span className="text-black font-inter font-semibold">{feature.name}</span>
-          </a>
-        ))}
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+        <Header />
+        <Exp onSortChange={handleSortChange} onSearch={handleSearch} />
+        <div className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {sortedFeatures.map((feature) => (
+            <a
+              key={feature.id}
+              href={feature.link}
+              className="bg-[#D9D9D9] dark:bg-gray-800 border-2 border-black dark:border-white rounded-2xl aspect-[3/4] transform transition-transform hover:scale-105 flex items-center justify-center"
+            >
+              <span className="text-black dark:text-white font-inter font-semibold">{feature.name}</span>
+            </a>
+          ))}
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </ThemeProvider>
   )
 }
 
