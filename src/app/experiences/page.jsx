@@ -10,15 +10,15 @@ export default function Experiences() {
 
   const features = [
     { id: 1, name: "TOGGLE DARK/LIGHT MODE", link: "/darkmode" },
-    { id: 2, name: "FEATURE 2", link: "/feature1" },
-    { id: 3, name: "FEATURE 3", link: "/feature2" },
-    { id: 4, name: "FEATURE 4", link: "/feature3" },
-    { id: 5, name: "FEATURE 5", link: "/feature4" },
-    { id: 6, name: "FEATURE 6", link: "/feature5" },
+    { id: 2, name: "MOVING LOGO", link: "/feature2" },
+    { id: 3, name: "TOP/NEW SORTING", link: "/topnewsorting" },
+    { id: 4, name: "SEARCH ENGINE", link: "/feature4" },
+    { id: 5, name: "???", link: "/feature5" },
+    { id: 6, name: "???", link: "/feature6" },
   ]
 
   const sortedFeatures =
-    sortOrder === "New" ? features : [features[3], features[1], features[0], features[2], features[5], features[4]]
+    sortOrder === "New" ? features : [features[1], features[3], features[0], features[2], features[5], features[4]]
 
   const handleSortChange = (newSortOrder) => {
     setSortOrder(newSortOrder)
