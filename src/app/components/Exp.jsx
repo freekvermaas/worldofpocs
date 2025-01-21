@@ -5,8 +5,8 @@ export default function Exp() {
           <div className="flex items-center justify-between">
             <div className="w-1/3">
               <div className="flex gap-4 justify-center">
-                <button className="px-6 py-2 rounded-full bg-[#FFC939] text-black font-medium">Top</button>
                 <button className="px-6 py-2 rounded-full bg-[#FFC939] text-black font-medium">New</button>
+                <button className="px-6 py-2 rounded-full bg-[#FFC939] text-black font-medium">Top</button>
               </div>
             </div>
   
