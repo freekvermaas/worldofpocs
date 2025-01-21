@@ -35,7 +35,7 @@ export default function TopNewSorting() {
             }`}
           >
             <video className="w-full h-full object-cover" controls playsInline>
-              <source src="/path-to-your-video.mp4" type="video/mp4" />
+              <source src="/videos/topnewsortingvideo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
