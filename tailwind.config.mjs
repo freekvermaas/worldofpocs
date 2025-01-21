@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--background)", // Custom background color
+        foreground: "var(--foreground)", // Custom foreground color
       },
       animation: {
-        'bounce-slow': 'custom-bounce 6s ease-in-out infinite',
+        'bounce-slow': 'custom-bounce 6s ease-in-out infinite', // Custom animation
       },
       keyframes: {
         'custom-bounce': {
