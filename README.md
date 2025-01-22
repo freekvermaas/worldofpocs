@@ -31,8 +31,9 @@ Het project gebruikt een kleurrijk en cartoonachtig ontwerp om het visueel aantr
 - React
 - Tailwind CSS
 
-## Contact
+## Contact + Info
 - Website: [worldofpocs.vercel.app](https://worldofpocs.vercel.app/)
+- Portfolio [freekvermaas.com](https://www.freekvermaas.com/)
 - Email: freekvermaas@gmail.com
  
 ## Licentie
