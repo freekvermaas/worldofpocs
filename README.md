@@ -25,7 +25,10 @@ worldofpocs/
 ├── public/        # Static assets
 ├── styles/        # Tailwind CSS configurations
 └── utils/         # Helper functions
-🛠️ Installation & Setup
+
+---
+
+## 🛠️ Installation & Setup
 Clone the repository:
 
 bash
@@ -53,7 +56,8 @@ bash
 Copy
 Edit
 npm run build
-📚 Proof of Concepts
+
+## 📚 Proof of Concepts
 Each POC is accessible from the main page. Click on a POC to see:
 
 A demonstration of the functionality.
