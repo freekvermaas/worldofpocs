@@ -21,8 +21,8 @@ export default function TopNewSorting() {
 
   const otherFeatures = [
     { id: 1, name: "TOGGLE DARK/LIGHT MODE", link: "/darkmode" },
-    { id: 2, name: "MOVING LOGO", link: "/feature2" },
-    { id: 4, name: "SEARCH ENGINE", link: "/feature4" },
+    { id: 2, name: "MOVING LOGO", link: "/movinglogo" },
+    { id: 4, name: "SEARCH ENGINE", link: "/searchengine" },
   ]
 
   return (
@@ -45,21 +45,23 @@ export default function TopNewSorting() {
             <h1 className="text-3xl font-inter font-semibold">TOP/NEW SORTING</h1>
             <div className="flex space-x-10">
               <div>
-                <h2 className="text-lg font-inter mb-2">
-                  <span className={theme === "dark" ? "text-[#A0A0A0]" : "text-[#696969]"}>Located on: </span>
-                  <span className="font-semibold">Experiences Page</span>
-                </h2>
+              <h2 className="text-lg font-inter mb-2">
+                <span className={theme === "dark" ? "text-[#A0A0A0]" : "text-[#696969]"}>Located on: </span>
+                <Link href="/experiences" className="font-semibold hover:underline">
+                Experiences Page
+                </Link>
+              </h2>
               </div>
               <div>
                 <h2 className="text-lg font-inter mb-2">
                   <span className={theme === "dark" ? "text-[#A0A0A0]" : "text-[#696969]"}>Steps: </span>
-                  <span className="font-semibold">4</span>
+                  <span className="font-semibold">3</span>
                 </h2>
               </div>
               <div>
                 <h2 className="text-lg font-inter mb-2">
                   <span className={theme === "dark" ? "text-[#A0A0A0]" : "text-[#696969]"}>Difficulty: </span>
-                  <span className="font-semibold">Easy</span>
+                  <span className="font-semibold">Medium</span>
                 </h2>
               </div>
             </div>
