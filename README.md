@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# World of POCs 🌟  
+**A collection of 9 simple yet clever Proof of Concepts (POCs) that demonstrate essential website functionalities.**  
 
-## Getting Started
+This repository showcases interactive POCs with step-by-step guides to help you learn how they are created. Explore, experiment, and get inspired to implement these features in your projects!
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Features
+- **Interactive Demos**: Each POC is live and fully functional.
+- **Step-by-Step Guides**: Learn how each POC is built with clear instructions.
+- **Colorful, Cartoonish Design**: A playful aesthetic to make learning fun and engaging.
+
+---
+
+## 📂 Project Structure
+The project is built using:
+- **[Next.js](https://nextjs.org/)**: React framework for building web applications.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for rapid UI development.
+
+Folder structure:  
+```plaintext
+worldofpocs/
+├── components/    # Reusable React components
+├── pages/         # Next.js pages for routing
+├── public/        # Static assets
+├── styles/        # Tailwind CSS configurations
+└── utils/         # Helper functions
+🛠️ Installation & Setup
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/freekvermaas/worldofpocs.git
+cd worldofpocs
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+Start the development server:
+
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 to view the project locally.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build for production (optional):
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+bash
+Copy
+Edit
+npm run build
+📚 Proof of Concepts
+Each POC is accessible from the main page. Click on a POC to see:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A demonstration of the functionality.
+A detailed step-by-step explanation of how it’s implemented.
+🎨 Design Philosophy
+The project uses a vibrant and cartoonish design to make it visually appealing while staying user-friendly. It's perfect for students and developers looking for inspiration or guidance.
 
-## Learn More
+🤝 Contributing
+Want to contribute your own POCs or enhance existing ones?
 
-To learn more about Next.js, take a look at the following resources:
+Fork the repository.
+Create a new branch: git checkout -b feature/your-feature-name.
+Commit your changes: git commit -m 'Add some feature'.
+Push to the branch: git push origin feature/your-feature-name.
+Open a pull request.
+📝 License
+This project is licensed under the MIT License.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📬 Contact
+Created by Freek Vermaas.
+Feel free to reach out or open an issue for any feedback, questions, or suggestions!
