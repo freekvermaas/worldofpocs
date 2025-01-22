@@ -1,5 +1,5 @@
 # World of POCs 🌟  
-**A collection of 9 simple yet clever Proof of Concepts (POCs) that demonstrate essential website functionalities.**  
+**A collection of 6 simple yet clever Proof of Concepts (POCs) that demonstrate essential website functionalities.**  
 
 This repository showcases interactive POCs with step-by-step guides to help you learn how they are created. Explore, experiment, and get inspired to implement these features in your projects!
 
@@ -62,6 +62,7 @@ Each POC is accessible from the main page. Click on a POC to see:
 
 A demonstration of the functionality.
 A detailed step-by-step explanation of how it’s implemented.
+
 🎨 Design Philosophy
 The project uses a vibrant and cartoonish design to make it visually appealing while staying user-friendly. It's perfect for students and developers looking for inspiration or guidance.
 
@@ -73,6 +74,7 @@ Create a new branch: git checkout -b feature/your-feature-name.
 Commit your changes: git commit -m 'Add some feature'.
 Push to the branch: git push origin feature/your-feature-name.
 Open a pull request.
+
 📝 License
 This project is licensed under the MIT License.
 
