@@ -71,7 +71,6 @@ function FeatureCard({ feature }) {
   const isSearchEngine = feature.name === "SEARCH ENGINE"
   const isUnknownFeature = feature.name === "???"
 
-  // Use a default theme (e.g., 'light') for the initial server-side render
   const currentTheme = mounted ? theme : "light"
 
   let bgImage = ""

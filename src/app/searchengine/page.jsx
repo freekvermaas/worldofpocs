@@ -146,7 +146,7 @@ export default function SearchEngine() {
                             className={`border-2 rounded-2xl max-w-3xl mx-auto overflow-hidden flex items-center justify-center ${
                             theme === "dark" ? "bg-gray-800 border-white" : "bg-gray-200 border-black"
                             }`}
-                            style={{ aspectRatio: "16/9" }} // Ensures video maintains the rectangle aspect ratio
+                            style={{ aspectRatio: "16/9" }}
                         >
                             <video
                             className="w-full h-full object-cover rounded-2xl"

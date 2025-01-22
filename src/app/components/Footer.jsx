@@ -3,7 +3,7 @@ export default function Footer() {
       <footer className="bg-[#212121] py-6 px-8 font-inter border-t-8 border-[#FFC939]">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-between">
-            {/* Contact Section */}
+
             <div>
               <h3 className="text-[#696969] text-sm mb-4">CONTACT</h3>
               <div className="space-y-2">
@@ -12,7 +12,6 @@ export default function Footer() {
               </div>
             </div>
   
-            {/* Connect Section */}
             <div>
               <h3 className="text-[#696969] text-sm mb-4">CONNECT</h3>
               <div className="space-y-2">
@@ -34,7 +33,6 @@ export default function Footer() {
               </div>
             </div>
   
-            {/* Logo Section */}
             <div className="flex justify-end">
               <a href="/" className="inline-block">
                 <img src="/images/worldofpocslogofooter.png" alt="World of poc's" />
@@ -42,7 +40,6 @@ export default function Footer() {
             </div>
           </div>
   
-          {/* Copyright */}
           <div className="mt-12 text-center text-white text-sm">© Freek Vermaas 2025. All rights reserved.</div>
         </div>
       </footer>

@@ -8,7 +8,7 @@ export default function home() {
       style={{ backgroundImage: 'url(/images/startbackground.png)' }}
     >
       <div className="text-center flex flex-col items-center justify-center">
-        {/* Logo */}
+
         <div className="animate-bounce-slow mb-8">
           <Image
             src="/images/freekpoclogo5.png"
@@ -19,7 +19,6 @@ export default function home() {
           />
         </div>
 
-        {/* Button */}
         <Link
           href="/experiences"
           className="inline-block px-8 py-4 font-bold rounded-full border-2 border-transparent hover:scale-105 transition-all duration-300 shadow-inner font-inter"
@@ -32,7 +31,6 @@ export default function home() {
         </Link>
       </div>
 
-      {/* Footer */}
       <footer className="absolute bottom-4 text-white text-sm font-inter">
         © Freek Vermaas 2025
       </footer>
