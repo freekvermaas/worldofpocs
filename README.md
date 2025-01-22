@@ -32,7 +32,7 @@ Het project gebruikt een kleurrijk en cartoonachtig ontwerp om het visueel aantr
 - Tailwind CSS
 
 ## Contact
-- Website: [www.????.nl](https://www.???.nl)
+- Website: [worldofpocs.vercel.app](https://worldofpocs.vercel.app/)
 - Email: freekvermaas@gmail.com
  
 ## Licentie
