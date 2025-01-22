@@ -55,7 +55,7 @@ export default function DarkMode() {
               <div>
                 <h2 className="text-lg font-inter mb-2">
                   <span className={theme === "dark" ? "text-[#A0A0A0]" : "text-[#696969]"}>Steps: </span>
-                  <span className="font-semibold">5</span>
+                  <span className="font-semibold">4</span>
                 </h2>
               </div>
               <div>
