@@ -36,32 +36,32 @@ export default function MovingLogo() {
             }`}
           >
             <video className="w-full h-full object-cover" controls playsInline>
-              <source src="/videos/darkmodevideo.mp4" type="video/mp4" />
+              <source src="/videos/movinglogovideo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
 
           <div className="space-y-6">
-            <h1 className="text-3xl font-inter font-semibold">TOGGLE DARK/LIGHT MODE</h1>
+            <h1 className="text-3xl font-inter font-semibold">MOVING LOGO</h1>
             <div className="flex space-x-10">
               <div>
                 <h2 className="text-lg font-inter mb-2">
                   <span className={theme === "dark" ? "text-[#A0A0A0]" : "text-[#696969]"}>Located on: </span>
-                  <Link href="/experiences" className="font-semibold hover:underline">
-                    Experiences Page
+                  <Link href="/" className="font-semibold hover:underline">
+                    Start Page
                   </Link>
                 </h2>
               </div>
               <div>
                 <h2 className="text-lg font-inter mb-2">
                   <span className={theme === "dark" ? "text-[#A0A0A0]" : "text-[#696969]"}>Steps: </span>
-                  <span className="font-semibold">4</span>
+                  <span className="font-semibold">2</span>
                 </h2>
               </div>
               <div>
                 <h2 className="text-lg font-inter mb-2">
                   <span className={theme === "dark" ? "text-[#A0A0A0]" : "text-[#696969]"}>Difficulty: </span>
-                  <span className="font-semibold">Medium</span>
+                  <span className="font-semibold">Easy</span>
                 </h2>
               </div>
             </div>
@@ -74,7 +74,7 @@ export default function MovingLogo() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-5xl">
                           <div className="space-y-12">
                             <p className="text-center max-w-3xl mx-auto">
-                              The search engine exists to make it easier to find certain items on your website. It's very useful for when you have a large amount to choose from.
+                              A moving logo on the first page of the website, creates an engaging opening for the user, adding more<br></br>flare and personality to the project.
                             </p>
                   
                             <div className="space-y-6">
@@ -83,18 +83,18 @@ export default function MovingLogo() {
                               className={`border-2 rounded-2xl max-w-3xl mx-auto overflow-hidden flex items-center justify-center ${
                                   theme === "dark" ? "border-white" : "border-black"
                               }`}
-                              style={{ width: "200px", height: "75px" }}
+                              style={{ width: "400px", height: "320px" }}
                               >
                                 <Image
-                                  src="/images/searchforbutton.png"
-                                  alt="Step 1 Example Search"
-                                  width={200}
-                                  height={200}
+                                  src="/images/worldofpocsiconliving.png"
+                                  alt="Step 1 Example Logo"
+                                  width={400}
+                                  height={400}
                                   className="rounded-2xl"
                                 />
                               </div>
                               <p className="text-center max-w-3xl mx-auto">
-                              The first step is to create the appearance of the search bar. It will have a text input where users can type. We also want to add a search icon to make it look visually appealing.
+                              To start, add the logo in your project. Directly placing it on your background will show perspective on how the final result will look.
                               </p>
                             </div>
                   
@@ -104,42 +104,21 @@ export default function MovingLogo() {
                               className={`border-2 rounded-2xl max-w-3xl mx-auto overflow-hidden flex items-center justify-center ${
                                   theme === "dark" ? "border-white" : "border-black"
                               }`}
-                              style={{ width: "400px", height: "75px" }}
+                              style={{ width: "400px", height: "225px" }}
                               >
                                 <Image
-                                  src="/images/search2code.png"
-                                  alt="Step 2 Example Search"
+                                  src="/images/logo2code.png"
+                                  alt="Step 2 Example Logo"
                                   width={400}
                                   height={150}
                                   className="rounded-2xl"
                                 />
                               </div>
                               <p className="text-center max-w-3xl mx-auto">
-                              Now that the search bar looks good, we need to implement the functionality to actually search. We'll track the user’s input and filter the results based on the query.
+                              Now, define a custom animation in your Tailwind CSS configuration. This animation will make the logo "bounce" slowly. Using keyframes you can create the exact animation you desire.
                               </p>
                             </div>
-                  
-                            <div className="space-y-6">
-                              <h2 className="text-2xl font-inter font-semibold text-center">STEP 3</h2>
-                              <div
-                              className={`border-2 rounded-2xl max-w-3xl mx-auto overflow-hidden flex items-center justify-center ${
-                                  theme === "dark" ? "border-white" : "border-black"
-                              }`}
-                              style={{ width: "700px", height: "95px" }}
-                              >
-                                <Image
-                                  src="/images/search3code.png"
-                                  alt="Step 3 Example Search"
-                                  width={700}
-                                  height={700}
-                                  className="rounded-2xl"
-                                />
-                              </div>
-                              <p className="text-center max-w-3xl mx-auto">
-                              We now want the search functionality to filter the items displayed on the page (the big buttons) and show only those whose names match the search query. We’ll also handle edge cases like empty searches<br></br>(which will display all) and invalid searches (which will show no results).
-                              </p>
-                            </div>
-                  
+                
                             <div className="space-y-6">
                               <h2 className="text-2xl font-inter font-semibold text-center">FINAL RESULT</h2>
                               <div
@@ -153,7 +132,7 @@ export default function MovingLogo() {
                                   controls
                                   playsInline
                                   >
-                                  <source src="/videos/searchenginevideo.mp4" type="video/mp4" />
+                                  <source src="/videos/movinglogovideo.mp4" type="video/mp4" />
                                   Your browser does not support the video tag.
                                   </video>
                               </div>
